@@ -1,0 +1,120 @@
+{% extends "templates/components/layout.html" %}
+{% load widget_tweaks %}
+{% block includes %}<title>Machine List</title>{% endblock includes %}
+{% block content %}
+{% load static %}
+<body>
+
+      {% include "templates/components/navbar.html" %}
+      <main>
+        <!-- Intro -->
+        <div class="container">
+          <div class="intro pb-5">
+            <div class="intro-text">
+              <h1 class="intro-h1">Advanced Automation Solutions</h1>
+              <p class="front-page">
+                Transfiere las tareas más repetitivas de tu negocio a nuestra nueva <b>solución robótica en la nube.</b>
+                </br>Crea un ejército de autómatas que trabaje 24/7 automatizando los procesos más repetitivos de su empresa.
+                </br>Reserva una hueco en el calendario para conseguir una sesión gratuita de consultoría en donde te ayudaremos en todos los pasos, desde el diseño del proceso hasta la puesta en producción.
+              </p>
+              <div class="buttons">
+                <a href="" class="btn-fill">Descubrir Más</a>
+              <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Agendar sessión</a>
+              </div>
+            </div>
+            <div class="intro-img">
+                <img src="{% static 'img/header-img.png' %}" alt="">
+            </div>
+
+          </div>
+          <!-- Clients -->
+          <div class="clients text-center">
+            <p class="text-muted text-uppercase pb-4">Leading Market Technologies </p>
+            <div class="client-logo">
+              <div><img src="{% static 'img/icon/github-logo.png' %}" alt=""></div>
+              <div><img src="{% static 'img/icon/docker-logo.webp' %}" alt=""></div>
+              <div><img src="{% static 'img/icon/heroku-logo.png' %}" alt=""></div>
+              <div><img src="{% static 'img/icon/python-logo.png' %}" alt=""></div>
+              <div><img src="{% static 'img/icon/openai-logo.png' %}" alt=""></div>
+            </div>
+          </div>
+          <!-- Variations -->
+          <div id="variations" class="variations">
+            <div class="first-variation">
+              <div class="img">
+                <img src="{% static 'img/man.png' %}" alt="">
+              </div>
+              <div class="text">
+                <h1 class="variations-h1">Miles de proceos a automatizar</h1>
+                <p class="front-page">
+                  Analizamos cualquier proceso en su empresa para proporcionarte sugerencias e ideas sobre cómo puedes reducir las tareas más manuales o ineficientes.
+                  </br>Desde finanzas a operaciones, ventas, producción, marketing o incluso atención al cliente.
+                  Todo lo que puedas imaginar.
+                  </br>Nos encantará ayudarte.</p>
+                <div class="buttons">
+                  <a href="" class="btn-fill">Descubrir Más</a>
+                <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Agendar Sesión</a>
+                </div>
+              </div>
+            </div>
+            <div class="second-variation">
+              <div class="text">
+                <h1 class="variations-h1">Implementa las últimas tecnologías de <b>Inteligencia Artificial</b></h1>
+                <p class="front-page">
+                  Descubre como implementar los ultimos modelos de inteligencia artificial
+                  en procesamiento del lenguage natural, generacion de imagenes, visión por ordenador
+                  o modelos predictivos de analítica de datos.
+                </p>
+                <div class="buttons">
+                  <a href="" class="btn-fill">Leer Más</a>
+                  <a href="" class="btn-outline">Agendar Session</a>
+                </div>
+              </div>
+              <div class="img">
+                <img src="{% static 'img/woman.png'%}" alt="">
+                <img class = "square" src="{% static 'img/icon/square.png'%}" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- Service -->
+          <div class="service">
+            <h1>Nuestros números nos respaldan</h1>
+            <p class="front-page">Más de 5 años automatizando procesos digitales.</p>
+            <div class="service-items">
+              <div class="item">
+                <img src="{% static 'img/icon/code-icon.svg'%}" alt="">
+                <span class="counter">7 453 664</span>
+                <span>Items <br>Procesados</span>
+              </div>
+              <div class="item">
+                <img src="{% static 'img/icon/cofee-icon.svg'%}" alt="">
+                <span class="counter">436</span>
+                <span>Procesos <br>Implementados</span>
+              </div>
+              <div class="item">
+                <img src="{% static 'img/icon/realized-projects-icon.svg'%}" alt="">
+                <span class="counter">292</span>
+                <span>Proyectos<br> Realizados</span>
+              </div>
+              <div class="item">
+                <img src="{% static 'img/icon/satisfied-client-icon.svg' %}" alt="">
+                <span class="counter">1 093 987</span>
+                <span>Horas de trabajo<br>Ahorradas</span>
+              </div>
+
+            </div>
+          </div>
+            {% include "templates/components/mail-form.html"%}
+            <!-- Projects -->
+          <div class="team text-center">
+            <h1>Top Projects</h1>
+             {% include "templates/components/posts.html" with posts=posts%}
+          </div>
+        </div>
+      </main>
+      <!-- Footer -->
+       {% include "templates/components/footer.html" %}
+
+</body>
+
+{% endblock %}

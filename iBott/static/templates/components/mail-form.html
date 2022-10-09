@@ -1,0 +1,15 @@
+ <!-- Newsletter -->
+ <div class="update-news">
+    <div class="row">
+      <div class="col-md-5 news-text">
+        <h2>Mantente informado</h2>
+        <p>Déjanos tu email para recibir las últimas novedades en <br> <b>Business Automation & Artificial Intelligence.</b></p>
+      </div>
+      <div class="col-md-7 news-form">
+        <form method="post" autocomplete="off">{% csrf_token %}
+        <input type="email" name="mail" placeholder="Escribe tu email" id="">
+        <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+ </div>

@@ -1,0 +1,42 @@
+<footer>
+          <div class="container text-center text-md-start py-5">
+            <div class="footer-wrap">
+              <div class="about">
+                {% load static %}
+                <img src="{% static 'img/icon/ibott.png' %}" alt="" style="width:250px; height:auto">
+                <p class="text-muted py-4">
+                  El objetivo de iBott es liberar a los humanos de las tareas aburridas. Si pudiéramos centrar toda nuestra pasión en aquello que nos gusta, el mundo sería un lugar mejor.
+                <div class="social-media">
+                  <a href="" class="me-2 text-reset"><img src="./img/icon/social-media-01.svg" alt=""></a>
+                  <a href="" class="me-2 text-reset"><img src="./img/icon/social-media-02.svg" alt=""></a>
+                  <a href="" class="me-2 text-reset"><img src="./img/icon/social-media-03.svg" alt=""></a>
+                  <a href="" class="me-2 text-reset"><img src="./img/icon/social-media-04.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="company">
+                <h6 class="fw-bold">Compañía</h6>
+                <p><a href="/product/">Producto</a></p>
+                <p><a href="/services/">Servicios</a></p>
+                <p><a href="/projects/">Proyectos</a></p>
+                <p><a href="/careers/">Carreras</a></p>
+                <p><a href="/blog/">Blog</a></p>
+              </div>
+              <div class="useful-links">
+                <h6 class="fw-bold">Useful links</h6>
+                <p><a href="/terms-of-service/">Términos del servicio</a></p>
+                <p><a href="/privacy-policy/">Política de privacidad</a></p>
+                <p><a href="/documentation/">Documentación</a></p>
+              </div>
+              <div class="newsletter">
+                <h6 class="fw-bold">Newsletter</h6>
+                <p class="text-muted">Registrate para recibir las últimas novedades
+                  via email.</p>
+                  <form id="subscribe" method="post" autocomplete="off">{% csrf_token %}
+                    <label for="mail">Youre e-mail:</label>
+                    <input type="email" placeholder="e-mail:" id="mail" name="mail" required>
+                    <button type="submit" class="btn-fill">Subscribe</button>
+                  </form>
+              </div>
+            </div>
+          </div>
+      </footer>

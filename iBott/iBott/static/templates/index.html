@@ -1,0 +1,127 @@
+{% extends "templates/components/layout.html" %}
+{% load widget_tweaks %}
+{% block includes %}<title>Machine List</title>{% endblock includes %}
+{% block content %}
+{% load static %}
+<body>
+
+      {% include "templates/components/navbar.html" %}
+      <main>
+        <!-- Intro -->
+        <div class="container">
+          <div class="intro pb-5">
+            <div class="intro-text">
+              <h1 class="intro-h1">Advanced Automation Solutions</h1>
+              <p class="front-page">Scale to next level, transfer the most repetitive tasks of your business to our new </b>robotic cloud solution.</b>
+                </br> Create an army of <b>automatas</b> that works 24/7 in all the processes of your company.
+                </br>Book a slot in the calendar below and get a <b>free</b> consulting session where we will help you in all the steps, from design to production.<br>
+              </p>
+
+              <div class="buttons">
+                <a href="" class="btn-fill">Read More</a>
+              <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Book session</a>
+              </div>
+            </div>
+            <div class="intro-img">
+                <img src="{% static 'img/header-img.png' %}" alt="">
+            </div>
+
+          </div>
+          <!-- Clients -->
+          <div class="clients text-center">
+            <p class="text-muted text-uppercase pb-4">Leading Market Technologies </p>
+            <div class="client-logo">
+              <div><img src="{% static 'img/icon/github-logo.png' %}" alt=""></div>
+              <div><img src="{% static 'img/icon/docker-logo.webp' %}" alt=""></div>
+              <div><img src="{% static 'img/icon/heroku-logo.png' %}" alt=""></div>
+              <div><img src="{% static 'img/icon/python-logo.png' %}" alt=""></div>
+              <div><img src="{% static 'img/icon/openai-logo.png' %}" alt=""></div>
+            </div>
+          </div>
+          <!-- Variations -->
+          <div id="variations" class="variations">
+            <div class="first-variation">
+              <div class="img">
+                <img src="{% static 'img/man.png' %}" alt="">
+              </div>
+              <div class="text">
+                <h1 class="variations-h1">There are thousands of processes to automate</h1>
+                <p class="front-page">We look at any process in your company to provide suggestions/ideas on how you can reduce your existing manual or inefficient processes. </br>From financial to operations, sales & marketing or even customer onboarding.</br> We’ll be happy to help.</p>
+                <div class="buttons">
+                  <a href="" class="btn-fill">Read More</a>
+                <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Book Session</a>
+                </div>
+              </div>
+            </div>
+            <div class="second-variation">
+              <div class="text">
+                <h1 class="variations-h1">Work with the most advanced technologies in <b>Artificial Intelligence</b></h1>
+                <p class="front-page">Discover how to implement automatic processes with the latest technologies in language processing & generation, data analytics or machine vision. </p>
+                <div class="buttons">
+                  <a href="" class="btn-fill">Read More</a>
+                  <a href="" class="btn-outline">Book Session</a>
+                </div>
+              </div>
+              <div class="img">
+                <img src="{% static 'img/woman.png'%}" alt="">
+                <img class = "square" src="{% static 'img/icon/square.png'%}" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- Service -->
+          <div class="service">
+            <h1>Everything is Measurable</h1>
+            <p class="front-page">More than 5 years in Robotic Process Automation.</p>
+            <div class="service-items">
+              <div class="item">
+                <img src="{% static 'img/icon/code-icon.svg'%}" alt="">
+                <span class="counter">7 453 664</span>
+                <span>Items <br>Processed</span>
+              </div>
+              <div class="item">
+                <img src="{% static 'img/icon/cofee-icon.svg'%}" alt="">
+                <span class="counter">436</span>
+                <span>Processes <br>Implemented</span>
+              </div>
+              <div class="item">
+                <img src="{% static 'img/icon/realized-projects-icon.svg'%}" alt="">
+                <span class="counter">292</span>
+                <span>Realized<br>Projects</span>
+              </div>
+              <div class="item">
+                <img src="{% static 'img/icon/satisfied-client-icon.svg' %}" alt="">
+                <span class="counter">103 987</span>
+                <span>Work hours<br>Saved</span>
+              </div>
+
+            </div>
+          </div>
+          <!-- Newsletter -->
+          <div class="update-news">
+            <div class="row">
+              <div class="col-md-5 news-text">
+                <h2>Get your update news</h2>
+                <p>If you going to use a passage of Lotem Ipsum, you need to be sure there  isn’t anything embarrassing.</p>
+              </div>
+              <div class="col-md-7 news-form">
+                <form method="post" autocomplete="off">{% csrf_token %}
+                <input type="email" name="mail" placeholder="Enter your email" id="">
+                <button type="submit">Send</button>
+                </form>
+              </div>
+            </div>
+            </div>
+            <!-- Projects -->
+          <div class="team text-center">
+            <h1>Top Projects</h1>
+             {% include "templates/components/posts.html" with posts=posts%}
+
+          </div>
+        </div>
+      </main>
+      <!-- Footer -->
+       {% include "templates/components/footer.html" %}
+
+</body>
+
+{% endblock %}

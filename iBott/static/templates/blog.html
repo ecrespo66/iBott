@@ -1,0 +1,17 @@
+{% extends "templates/components/layout.html" %}
+{% load widget_tweaks %}
+{% block includes %}<title>iBott Services</title>{% endblock includes %}
+{% block content %}
+<body>
+  {% include "templates/components/navbar.html" %}
+  <main>
+        <div class="container">
+              <h2 class="underscore mb-5">The Automation Blog</h2><br>
+          <div class="row">
+           {% include "templates/components/posts.html" with posts=posts%}
+          </div>
+        </div>
+      </main>
+   {% include "templates/components/footer.html" %}
+</body>
+{% endblock %}

@@ -1,0 +1,417 @@
+{% extends "templates/components/layout.html" %}
+{% load widget_tweaks %}
+{% block includes %}<title>iBott Services</title>{% endblock includes %}
+{% block content %}
+<body>
+  {% include "templates/components/navbar.html" %}
+  {% load static %}
+  <main>
+    <div class="container">
+    <div class="intro pb-5">
+       <div class="intro-text">
+              <h1 class="intro-h1">iBott Automation Cloud</h1>
+              <p class="front-page" style="text-align: justify">
+                iBott RPA es la herramienta de automatización definitiva para tu negocio.
+                Sencilla y facil de utilizar, permite que cualquiera pueda utilizarla sin necesidad
+                de tener conocimientos técnicos.
+                </br>
+                Escrita 100% en <b>Python</b>, permite ejecutar automatismos en tu ordenador local, sin importar el sistema operativo
+                que utilices <b>Windows</b> o <b>Mac</b>.
+                </br>
+                Gracias a su sistema multiplataforma, también podrás desplegar tus procesos facilmente
+                en un servidor Cloud <b>Windows</b> o <b>Linux</b>.
+                </br>
+                Se integra perfectamente con la api de <b>Github</b> para que puedas desplegar y compartir tus procesos fácilmente.
+              </br>
+                No esperes más y reserva tu sesión de consultoría gratuita.</br> Estaremos encantados de ayudarte.
+              </p>
+              <div class="buttons">
+                <a href="" class="btn-fill">Robot Console</a>
+              <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Agenda sesión</a>
+              </div>
+            </div>
+        <div class="intro-img">
+                <img src="{% static 'img/ibott-screens-2.jpg' %}" alt="">
+            </div>
+    </div>
+    <div id="variations" class="variations">
+      <div class="first-variation">
+              <div class="img">
+                <img src="{% static 'img/robot-human.jpeg' %}" alt="">
+              </div>
+              <div class="text">
+                <h1 class="variations-h1">La solución definitiva para tu negocio</h1>
+                <p class="front-page">
+                  iBott esta compuesta por una consola principal desde la que se controla todo el sistema
+                  de automatización.
+                  </br>
+                  Sencilla y fácil de utilizar, cuenta con una interfaz gráfica pensada
+                  para que cualquiera pueda utilizarla sin necesidad de tener ningún conocimiento previo
+                  en automatización.
+                </br>
+                  Puedes conectar múltiples máquinas u ordenadores para que se encarguen de ejecutar
+                  todos tus procesos automáticos. Para conectar una máquina, tan solo tendrás que instalar
+                  un programa en tu ordenador <b>iBott Robot Runner</b> que se encargará de lanzar los automatismos.
+                </br>
+                  Para instalar la aplicacion visita este repositorio: <a href="https://github.com/ecrespo66/robot_runner_flask.git" target="_blank">Robot Runner</a>
+                </br>
+                  O contacta con nuestro equipo y  lo haremos por ti.</p>
+                <div class="buttons">
+                  <a href="" class="btn-fill">Descubrir Más</a>
+                <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Agendar Sesión</a>
+                </div>
+              </div>
+            </div>
+      <div class="second-variation">
+              <div class="text">
+                <h1 class="variations-h1">Un universo de posibilidades</h1>
+                <p class="front-page">
+                  iBott se integra con el mayor repositorio de código en el mundo lo que permite desarrollar,
+                  importar y compartir procesos de la forma más ágil posible. Gracias a la gran comunidad de
+                  desarrolladores, podrás ejecutar procesos <b>Open Source</b>, desarrollar tus propios automatismos
+                  o contactar con nuestro equipo de expertos en automatización que te ayudarán en todo el
+                  proceso, desde el diseño hasta la implementación.
+                </br>
+                  Si quieres aprender a crear tus propios procesos, visita <a href="#">iBott academy</a>
+                </p>
+                <div class="buttons">
+                  <a href="" class="btn-fill">Descubrir Más</a>
+                <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Agendar Sesión</a>
+                </div>
+              </div>
+              <div class="intro-img">
+                <img src="{% static 'img/github.jpeg'%}" alt="" style="max-width:100%">
+              </div>
+            </div>
+    </div>
+    <div id="variations2" class="variations">
+            <div class="first-variation">
+              <div class="img">
+                <img src="{% static 'img/clever-solution.jpeg' %}" alt="">
+              </div>
+              <div class="text">
+                <h1 class="variations-h1">iBott, la mejor opción para tu negocio</h1>
+                <p class="front-page">
+                  Mientras que el precio medio de otros softwares de RPA como <b>Uipath</b> o <b>Blue Prism</b> se encuentra
+                  entre  30.000 y 50.000 euros anuales para un proyecto de tamaño medio, <b>iBott</b> se trata de una
+                  solución sencilla, gratuita, multiplataforma, eficiente y escalable, lo que permite a
+                  cualquier empresa, o autónomo adentrarse en el mundo del RPA sin necesidad de desembolsar
+                  grandes cantidades en licencias, infraestructura y equipos de desarrollo.
+                  </br>
+                  En <b>iBott</b> nos encargamos de todo, te proveemos de todo el software necesario para
+                  automatizar procesos de forma totalmente gratuita, analizamos los procesos de tu negocio,
+                  desarrollamos los automatismos y los desplegamos en un servidor en la nube para que no tengas
+                  que preocuparte por nada. ¡Contactanos!
+            </p>
+           <div class="buttons">
+                  <a href="" class="btn-fill">Descubrir Más</a>
+                <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Agendar Sesión</a>
+                </div>
+              </div>
+            </div>
+            <div class="second-variation">
+              <div class="text">
+                <h1 class="variations-h1">Automatiza cualquier proceso que puedas imaginar</h1>
+                <p class="front-page">
+                    Si tienes una empresa, eres emprendedor o autónomo, y pasas gran parte del día frente
+                    a un ordenador, iBott es la solución ideal para ti.
+                  </br></br>
+                    ¿Quieres saber que está haciendo tu competencia en internet?
+                    Con iBott podrás extraer, transformar y consolidar toda información publica que
+                    te interese. Generar reportes periódicos y compartirlos con tu equipo de la forma
+                    más sencilla.
+                  </br></br>
+                    ¿Trabajas en marketing digital? ¿Te gustaría integrar toda la información de tus
+                    campañas digitales en una única herramienta de análisis? Que tal si calculamos
+                    la rentabilidad de tus campañas cruzándola con la información de tu página o tu CRM.
+                    </br></br>
+                  ¿Publicas anuncios periódicamente en distintas plataformas de venta?
+                  Con iBott podrás automatizar cualquier flujo de trabajo de forma fácil y sencilla.
+                  </br></br>
+                  Ahora es el momento de hacer un pequeño ejercicio y pensar en todas las tareas que
+                  realizas día a día de forma repetitiva que consumen gran parte de tu tiempo y que
+                  aportan poco valor a tu negocio. No lo dejes pasar contacta con nosotros y transforma tu negocio en un sistema automático que te permita concentrarte en los que realmente lo hace único.
+                </p>
+                <div class="buttons">
+                  <a href="" class="btn-fill">Descubrir Más</a>
+                <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Agendar Sesión</a>
+                </div>
+              </div>
+              <div class="img">
+                <img src="{% static 'img/entepreneur.jpeg'%}" alt="">
+              </div>
+            </div>
+          </div>
+    <div id ="intro-app" class="intro pb-5">
+        <div class="intro-text">
+        <h1 class="intro-h1">¿Cómo funciona la Robot Console?</h1>
+        <p class="front-page" style="text-align:justify">
+          Es una aplicación web que se encarga de gestionar tus automatismos de una forma sencilla.
+          Pensada para que pueda ser utilizada por cualquier usuario de negocio, sin necesidad de tener ningún background técnico.
+          </br>
+          Cuenta con un sistema único de carpetas en donde se agrupan todos los automatismos,
+          puedes invitar a los miembros de tu equipo a participar en tu carpeta o proyecto y asignar diferentes permisos y roles.
+          </br>
+          Está compuesta por 3 apartados:  <b>Robots</b>, <b>Machines</b> y <b>Schedules</b> con los se controla todo el
+          ecosistema de robotización. Cuenta además con una página en donde se recogen las métricas principales
+          de tus procesos.
+          Regístrate en la consola, o contacta con nuestro equipo de robotización y te ayudaremos en todo el proceso.
+        </p>
+           <div class="buttons">
+             <a href="" class="btn-fill">Robot Console</a>
+             <a href="https://calendly.com/enrique-crespo-debenito/30min" target='_blank' class="btn-outline">Agendar Sesión</a>
+           </div>
+      </div>
+        <div class="intro-img">
+          <img src="{% static 'img/console.jpg' %}" alt="">
+        </div>
+      </div>
+    <div class="col-lg-11">
+      <div id="folders">
+        <div class="title">
+          <img src="{% static 'img/icon/folder.png' %}" style="width:50px; float:left;margin-right: 10px; ">
+          <h3 class="highlight-h3">Folders</h3>
+        </div>
+        <div class="content">
+          <p>
+          Una vez creada nuestra cuenta en iBott Robot Console, se nos creará una carpeta que contiene
+          todo lo relativo a nuestro proyecto de automatización.
+          Dentro de esta carpeta, tendremos un usuario <b>Robot</b> asociado con un token de autorización
+          con el que realizar el intercambio de datos entre la consola y las distintas máquinas configuradas
+          para nuestro proyecto.</br>
+          Si navegamos a nuestra carpeta, podemos ver una lista con los distintos grupos de usuarios creados
+          con los diferentes permisos asociados a cada grupo.</br>
+          Por defecto se creará el grupo admin en el que estareis tu y el robot como usuarios asociados.
+          Aquí podrás añadir nuevos grupos, asignarles permisos e invitar a otros usuarios a trabajar en tu proyecto.
+        </p>
+          <img src="{% static 'img/group-permissions.png' %}" class="app-view">
+          <p>
+          Una vez configurados los grupos y permisos, tendremos que configurar la conexión con github
+          para poder ejecutar los procesos.
+          Para ellos tendremos que crearnos una cuenta en <a href="https://github.com/">github.com</a>,
+          navegar al apartado Settings -> Developer Settings -> personal access tokens.
+          Generaremos un nuevo token con permisos de lectura y clonado de repositorios y copiaremos
+          el token de acceso que tendremos que pegar en el apartado <b>Settings</b> de nuestro proyecto,
+          asi como nuestro usuario de github.
+        </p>
+          <img src="{% static 'img/folder-settings.png' %}" class="app-view">
+        </div>
+      </div>
+      <div id="robots">
+        <div class="title">
+          <img src="{% static 'img/icon/robot.png' %}" style="width:50px; float:left;margin-right: 10px; ">
+          <h3 class="highlight-h3">Robots</h3>
+        </div>
+        <div class="content">
+          <p>
+          Aquí encontraremos un listado con todos los procesos creados.
+          Podrás ordenar y filtrar la lista de procesos, navegar a los procesos ya existentes o
+          crear uno nuevo en el botón <b>add robot + </b> de la esquina superior derecha.
+        </p>
+          <img src="{% static 'img/robots-page.png' %}" class="app-view">
+          <p>
+          Una vez entremos en un proceso encontraremos los siguientes campos con la información necesaria
+          para la ejecución de tus automatismos:
+        </p>
+          <ol class="color-list">
+        <li><b>Nombre del proceso.</b> Se trata de un identificador único para cada automatismo,
+          lo que significa que no podrás tener más de un proceso con el mismo nombre.</li>
+        <li><b>Tags</b> que identifican el proceso ej: Aplicaciones que utiliza.</li>
+        <li><b>Url del repositorio</b> en donde se encuentra alojado el robot.
+            Sino conoces Github y la tecnología git, es hora de que aprendas un poco sobre esta
+            impresionante tecnología aqui: <a href="https://es.wikipedia.org/wiki/Git">Tecnología Git</a></li>
+        <li><b>Formulario de entrada.</b> Este formulario permite enviar información actualizada al robot
+          de una forma rápida y sencilla. Puedes seleccionar fechas de un calendario, subir archivos
+          para que el robot los procese, escribir números o texto, o incluso seleccionar elementos
+          de un desplegable. No olvides definir la información por defecto a la hora de crear el formulario,
+          pues esta será consumida por el robot cuando se lancen los procesos automáticamente.</li>
+        <li><b>Máquinas.</b> En este desplegable, seleccionaremos el ordenador o máquina en donde se ejecutará
+          el proceso.</li>
+        <li><b>Ramas (Branches).</b> Aquí seleccionaremos la rama dentro del repositorio git, la cual queremos
+          ejecutar, esto es muy util cuando tenemos dos o más versiones de un mismo proceso.
+          Sino sabes que son las ramas, puedes consultar el siguiente articulo:
+         <a href="https://es.wikipedia.org/wiki/Git">Tecnología Git</a></li>
+        <li><b>Documentación del proceso. </b> Se trata de un archivo con la extensión .md que se encuentra
+          alojado en el repositorio con la el nombre <b>readme.md</b> aquí encontraremos toda la información
+          relativa al automatismo con el que vamos a trabajar.
+          </li>
+      </ol>
+        </div>
+      </div>
+      <div id="executions">
+        <div class="title">
+          <img src="{% static 'img/icon/checking.png' %}" style="width:50px; float:left;margin-right: 10px; ">
+          <h3 class="highlight-h3">Executions</h3>
+        </div>
+        <div class="content">
+          <p>
+        En el apartado ejecuciones, encontraremos un listado con las ejecuciones de todos
+        nuestros procesos. Puedes ordenarla y filtrarla con cualquiera de los campos visibles de la página.
+        </p>
+          <img src="{% static 'img/executions.png' %}" class="app-view">
+          <p>
+          Aquí encontraremos un resumen con toda la información necesaria para ver de un vistazo el estado de las ejecuciones:
+        </p>
+          <ol class="color-list">
+            <li>Identificador único de la ejecución</li>
+            <li>Estado de la ejecución (OK, Fail, Pending o Working)</li>
+            <li>Nombre del proceso ejecutado</li>
+            <li>Fecha de inicio de la ejecución</li>
+            <li>Fin del fin de la ejecución.</li>
+          </ol>
+          <p>
+          Una vez entramos en la ejecución, tendremos un listado de todos los logs que el proceso
+          ha dejado para dicha ejecución donde se recoge la siguiente información:
+        </p>
+          <ol class="color-list">
+          <li>El tipo de log (Log, Trace, Info, System o Business Exception).</li>
+          <li>El mensaje que contiene el log. </li>
+          <li>La fecha en la que se registra el log.</li>
+        </ol>
+          <img src="{% static 'img/logs.png' %}" class="app-view">
+        </div>
+      </div>
+      <div id="queues">
+        <div class="title">
+      <img src="{% static 'img/icon/checking.png' %}" style="width:50px; float:left;margin-right: 10px; ">
+      <h3 class="highlight-h3">Queues</h3>
+      </div>
+        <div class="content">
+        <p>
+        Una <b>Queue</b> o cola de trabajo, es una tabla en la cual se almacena un conjunto de Items.
+        Cada item contiene una con la información necesaria para cada transacción que el proceso tiene que realizar.
+        Una vez dentro a la <b>robot console</b>, encontraremos dentro del apartado <b/>Queues</b> un listado con todas las colas disponibles
+        para tus procesos en donde encontraremos siguiente información:
+        </p>
+        <ol class="color-list">
+            <li>El nombre de la cola</li>
+            <li>los robots que pueden publicar o consumir los datos de dicha cola</li>
+            <li>El identificador único de la cola </li>
+            <li>El número de ítems que contiene la cola</li>
+            <li>El estado en el que se encuentra la cola, que puede ser (OK, Fail, Pending o Working).</li>
+          </ol>
+        <img src="{% static 'img/queues.png' %}" class="app-view">
+        <p>
+            Una vez dentro de la cola, encontraremos una lista con todos los items que pertenecen a dicha cola,
+            en donde se recoge la siguiente información:
+          </p>
+        <ol class="color-list">
+            <li>Identificador del item o Id</li>
+            <li>El estado en el que se encuentra (Pending, Working, Ok o Fail)</li>
+            <li>La fecha de creación del item</li>
+            <li>La fecha de resolución del item en el caso de que haya sido procesado</li>
+          </ol>
+        <img src="{% static 'img/queue-items.png' %}" class="app-view">
+        <p>
+          Una vez accedemos a un item, encontraremos una tabla dinámica de NxN celdas en la que se almacena
+          toda la información a consumir por el robot.
+        </p>
+        <img src="{% static 'img/item.png' %}" class="app-view">
+        <img src="{% static 'img/queues.png' %}" class="app-view">
+      </div>
+      </div>
+      <div id="assets">
+        <div class="title">
+        <img src="{% static 'img/icon/assets.png' %}" style="width:50px; float:left;margin-right: 10px; ">
+        <h3 class="highlight-h3">Assets</h3>
+      </div>
+        <div class="content">
+        <p>
+        Los assets se tratan de variables globales que pueden ser consumidas por uno o más procesos.
+        Estas variables se alojan en la consola para que puedan ser modificadas de forma rápida y
+        sencilla por el equipo no técnico, una única vez sin necesidad de cambiarlas proceso por proceso.
+        </br>
+        Aquí se almacena información relativa a credenciales de acceso, cuentas de correo para reportes,
+        urls de acceso o cualquier otra información que sea consumida por los automatismos.
+        Cuando accedemos al apartado Assets, encontraremos la siguiente información:
+        </p>
+        <ol class="color-list">
+          <li>El identificador de Asset o Id</li>
+          <li>El nombre del asset</li>
+          <li>El tipo de información que almacena, que podrá ser de tipo Credencial, Texto o Numérica</li>
+        </ol>
+        <img src="{% static 'img/assets.png' %}" class="app-view">
+      </div>
+      </div>
+      <div id="machines">
+        <div class="title">
+        <img src="{% static 'img/icon/laptop.png' %}" style="width:50px; float:left;margin-right: 10px; ">
+        <h3 class="highlight-h3">Machines</h3>
+      </div>
+        <div class="content">
+        <p>
+          En el apartado máquinas, encontraremos el listado de máquinas disponibles para ejecutar los
+          automatismos. En este apartado encontraremos la siguiente información:
+        </p>
+        <ol class="color-list">
+          <li><b>Estado de la máquina.</b>Este podrá ser Closed, cuando esta se encuentre desconectada,
+              Free cuando esta se encuentre disponible para ejecutar
+              un proceso, o Busy cuando se encuentre ejecutando un automatismo.
+          </li>
+          <li><b>Nombre de la máquina.</b> Para poder identificarla fácilmente.</li>
+          <li><b>Id de la máquina</b> y <b>clave de licencia</b> de la máquina.
+              Ambos valores nos permiten realizar la conexión entre la consola y las distintas máquinas
+              configuradas.</li>
+          <li><b>Dirección IP</b> y <b>puerto de conexión</b> en donde la consola enviará la información para realizar la conexión. </li>
+        </ol>
+        <img src="{% static 'img/maquinas.png' %}" class="app-view">
+        </div>
+      </div>
+      <div id="schedules">
+        <div class="title">
+       <img src="{% static 'img/icon/calendar.png' %}" style="width:50px; float:left;margin-right: 10px; ">
+       <h3 class="highlight-h3">Schedules</h3>
+      </div>
+        <div class="content">
+        <p>
+          En este apartado encontraremos tanto un programador de ejecuciones como un calendario
+          en donde se registran todas las ejecuciones programadas de tus procesos.
+          </br>
+          En el primero, tenemos una interfaz gráfica que se encarga de generar tareas de tipo cron,
+          donde tendrás que seleccionar el año, los meses, los días, las horas y los minutos en los que se
+          ejecutarán tus automatismos, pudiendo incluso generar lógicas complejas o periodos de tiempo.
+        </p>
+        <img src="{% static 'img/cron.png' %}" class="app-view">
+        <p>
+          En el segundo tenemos un calendario con tres vistas, mensual, semanal y diaria, asi como una tabla
+          donde se listan todas las tareas guardadas para tus procesos.
+        </p>
+        <img src="{% static 'img/calendar.png' %}" class="app-view">
+      </div>
+      </div>
+      <div id="charts">
+        <div class="title">
+        <img src="{% static 'img/icon/bar-chart.png' %}" style="width:50px; float:left;margin-right: 10px; ">
+        <h3 class="highlight-h3">Charts</h3>
+      </div>
+        <div class="content">
+        <p>
+          Por último, encontraremos una página donde se recogen las métricas de tus procesos.
+          En la parte superior de la página, encontraremos 4 desplegables donde podremos filtrar la
+          información por robot, fecha, cola y status.
+          </br>
+          A continuation, tenemos las métricas totales de la aplicación:
+        </p>
+        <ol class="color-list">
+            <li>Número de procesos.</li>
+            <li>Número de ejecuciones.</li>
+            <li>Número de colas.</li>
+            <li>Número de items totales.</li>
+          </ol>
+        <p>
+          En el siguiente apartado encontramos un gráfico de tipo tarta en donde se recoge
+          el total de ejecuciones por estado y un gráfico de barras apilado en donde podemos ver
+          el número de ejecuciones y su estado por cada robot.
+          </br>
+          Por último, tenemos la información sobre las colas y los items, en donde al igual que en el apartado anterior,
+          se recoge el total en un gráfico de tarta y la información desglosada por colas en un gráfico de barras apilado.
+        </p>
+        <img src="{% static 'img/charts.png' %}" class="app-view">
+      </div>
+      </div>
+    </div>
+  </div>
+  </main>
+  {% include "templates/components/footer.html" %}
+</body>
+{% endblock %}

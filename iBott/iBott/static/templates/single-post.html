@@ -1,0 +1,73 @@
+{% extends "templates/components/layout.html" %}
+{% load widget_tweaks %}
+{% block includes %}<title>iBott | {{post.title}}</title>{% endblock includes %}
+{% block content %}
+
+<body>
+{% include "templates/components/navbar.html" %}
+  <main>
+    <div class="container">
+          <div class="row">
+            <div class="main col-lg-10">
+              <div class="single-post">
+                <h2>{{post.title}}</h2>
+                <div class="post-meta text-muted">
+                  <span><i class="far fa-user"></i> {{post.creator}} </span><span><i class="far fa-calendar"></i> {{post.creation_date|date:"d M Y"}}</span><span><i class="far fa-comment-alt"></i> {{post.comments.count}} comments</span>
+                </div>
+                <div class="post-contant">
+                  {% load static %}
+                  <div class="post-img"><img src="{% get_static_prefix %}uploads/{{ post.image }}" alt=""></div>
+                  {{post.content|safe}}
+
+                  <div class="share">
+                    <a  href=""><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+                    <a  href=""> <i class="fab fa-google-plus-g"></i> GOOGLE+</a>
+                    <a  href=""><i class="fab fa-linkedin-in"></i> LINKEDIN</a>
+                    <a  href=""><i class="fab fa-pinterest-p"></i> PINTEREST</a>
+                  </div>
+                  <div class="navigation">
+                    <a class="prew" href = {{post.prev}}><i class="fas fa-chevron-left"></i> PREVIOUS</a>
+                    <a class="next" href ={{post.next}}>NEXT <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                  <div class="line"></div>
+                  <form id="commentForm">
+                    <!-- Message input -->
+                    <div class="mb-3">
+                      <label class="form-label" for="comment">Leave a Comment</label>
+                      <textarea class="form-control" id="comment" type="text" placeholder="" style="height: 10rem;" data-sb-validations="required"></textarea>
+                      <div class="invalid-feedback" data-sb-feedback="message:required">Comment is required.</div>
+                    </div>
+                    <!-- Name input -->
+                    <div class="mb-3">
+                      <input class="form-control" id="name" type="text" placeholder="Name *" data-sb-validations="required" />
+                      <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                    </div>
+                    <!-- Email address input -->
+                    <div class="mb-3">
+                      <input class="form-control" id="emailAddress" type="email*" placeholder="Email Address *" data-sb-validations="required, email" />
+                      <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                      <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                    </div>
+                    <!-- Form submissions success message -->
+                    <div class="d-none" id="submitSuccessMessage">
+                      <div class="text-center mb-3">Form submission successful!</div>
+                    </div>
+                    <!-- Form submissions error message -->
+                    <div class="d-none" id="submitErrorMessage">
+                      <div class="text-center text-danger mb-3">Error sending message!</div>
+                    </div>
+                    <!-- Form submit button -->
+                    <div class="d-grid">
+                      <button class="btn-fill" id="submitButton" type="submit">Post Comment</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+  </main>
+    {% include "templates/components/footer.html" %}
+</body>
+{% endblock %}

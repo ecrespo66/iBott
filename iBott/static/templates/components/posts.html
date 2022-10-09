@@ -1,0 +1,22 @@
+
+
+{% for post in posts%}
+
+<div class="main col-lg-10">
+    <div class="all-posts">
+      <div class="post-item">
+        <div class="post-img">
+          {% load static %}
+          <img src="{{ post.image.url }}" alt=""></div>
+        <div class="post-main-info">
+          <h4>{{post.title}}</h4>
+          <div class="post-meta">
+            <span><i class="far fa-user" aria-hidden="true"></i> {{post.creator}} </span><span><i class="far fa-calendar" aria-hidden="true"></i> {{post.creation_date|date:"d M Y"}}</span><span><i class="far fa-comment-alt" aria-hidden="true"></i> {{post.comments.count}} comments</span>
+          </div>
+          <p>{{post.excerpt|truncatechars:255}}</p>
+          <a href="/blog/{{post.url}}" class="btn-fill">Read More</a>
+        </div>
+      </div>
+    </div>
+</div>
+{%endfor%}

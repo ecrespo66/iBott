@@ -1,0 +1,58 @@
+{% extends "templates/components/layout.html" %}
+{% load widget_tweaks %}
+{% block includes %}<title>Machine List</title>{% endblock includes %}
+{% block content %}
+{% load static %}
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+<body>
+      {% include "templates/components/navbar.html" %}
+      <main>
+            <div class="container">
+                  <h2> New Post</h2>
+                  <div class="row">
+                        <div class="main col-lg-10">
+                        {% for message in messages %}
+                              <p>{{message}}</p>
+                        {% endfor %}
+                        <div class="mb-3">
+                        <form action="" method="post" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              {{form.media}}
+                              <h6>Post url</h6>
+                              {{ form.url }}
+                              {{ form.url.errors }}
+                              <br>
+                              <h6>Post Title</h6>
+                              {{ form.title}}
+                               {{ form.title.errors }}
+                               <br>
+                              <h6>Post excerpt</h6>
+                              {{form.excerpt}}
+                               <br>
+                              <h6>Post Image</h6>
+                              {{form.image}}
+                               <br>
+                              <h6>Post Content</h6>
+                              {{ form.content }}
+                               <br>
+                               <br>
+                        <div class="d-grid">
+                              <button class="btn-fill mt-0 disabled" id="submitButton" type="submit">Publish content</button>
+                        </div>
+                        </form>
+                        </div>
+                        </div>
+            </div>
+            </div>
+
+      </main>
+      {% include "templates/components/footer.html" %}
+
+<style>
+.hidden {
+    display: none;
+}
+[data-editorjs-wrapper] {
+    max-width: 100%;}
+</style>
+{% endblock %}
